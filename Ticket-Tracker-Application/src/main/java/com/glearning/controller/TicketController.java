@@ -36,6 +36,7 @@ public class TicketController {
     @PostMapping("/create")
     public String createTicket(@ModelAttribute Ticket ticket) {
         ticketService.createTicket(ticket);
+        System.out.println(ticket.getId());
         return "redirect:/tickets/";
     }
 
